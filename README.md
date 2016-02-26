@@ -1,7 +1,7 @@
 # Jauzi
 ## Euskal Dantzak ikasteko APP
 
-Web orrialdea <a target="_blank" href="http://www.jauzi.eus"></a>
+Web orrialdea <a target="_blank" href="http://www.jauzi.eus">www.jauzi.eus</a>
 
 ### Ikas ezazu jauzirekin
 

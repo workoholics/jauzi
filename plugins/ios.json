@@ -7,7 +7,25 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.workoholics.jauzi"
+        },
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.workoholics.jauzi"
         }
     },

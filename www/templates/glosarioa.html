@@ -1,0 +1,9 @@
+<ion-view>
+  <ion-content>
+    <div class="list glosary">
+      <a href="#/glosarioaDetail/{{definition._id}}" class="item item-text-wrap" ng-repeat="definition in definitions | orderBy : 'name'">
+        {{definition.name}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

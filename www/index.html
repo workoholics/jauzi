@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link rel="stylesheet" href="lib/material-design-icons/css/material-design-iconic-font.min.css">
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    
+  </head>
+  <body class="jauzi" ng-app="jauzi" ng-controller="NavigationCtrl" ng-class="{true:'homescreen'}[$root.isHome]">
+      <ion-side-menus>
+        <!-- Left menu -->
+        <ion-side-menu side="left">
+          <div class="side-menu-header">
+            <img src="img/logo.svg"/>
+          </div>
+          <nav>
+            <ul>
+              <li><a menu-close href="#/">Hasiera</a></li>
+              <li><a menu-close href="#/glosarioa">Glosarioa</a></li>
+              <li><a menu-close href="#/guriBuruz">JAUZIri buruz</a></li>
+              <li><a menu-close href="#/about">Kredituak</a></li>
+            </ul>
+          </nav>
+        </ion-side-menu>
+
+        <ion-side-menu-content>
+          <!-- <ion-header-bar class="bar-dark">
+            <button class="button icon ion-navicon" data-ng-click="toggleLeft()"></button>
+            <h1 class="title">Jauzi</h1>
+          </ion-header-bar> -->
+          <div ng-show="jbar.visible"
+               class="jbar jbar-blue"
+               ng-class="{dances:'bg-blue', steps:'bg-green',other:'bg-brown'}[$root.danceOrStep]">
+            <button ng-show="jbar.leftAction === 'menu'" class="button" data-ng-click="toggleLeft()"><i class="icon zmdi zmdi-menu"></i></button>
+            <button ng-show="jbar.leftAction === 'back'" class="button" data-ng-click="back()"><i class="icon zmdi zmdi-arrow-back"></i></button>
+            <h1 class="title">{{jbar.title}}</h1>
+          </div>
+          <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+
+      </ion-side-menus>
+    
+    <script src="js/plugins/jquery.js"></script>
+    <script src="js/controllers/slider.js"></script>
+    <script src="js/controllers/dantza.js"></script>
+    <script src="js/controllers/glosarioa.js"></script>
+    <script src="js/controllers/glosarioaDetail.js"></script>
+    <script src="js/controllers/guriBuruz.js"></script>
+    <script src="js/controllers/hurratsa.js"></script>
+    <script src="js/controllers/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<ion-view>
+  <ion-content class="step-screen">
+    <iframe width="{{videoW}}" height="{{videoH}}" src="{{$root.loadedVideo}}" frameborder="0" allowfullscreen></iframe>
+    <section class="info">
+      <span ng-if="step.level === '1'" class="dificult point-yellow">Erraza</span>
+      <span ng-if="step.level === '2'" class="dificult point-orange">Erdi-mailakoa</span>
+      <span ng-if="step.level === '3'" class="dificult point-red">Zaila</span>
+      <p>{{step.description}}</p>
+    </section>
+    <section ng-show="resources.length > 0"  class="step-images">
+      <ion-slide-box on-slide-changed="changeActive($index)">
+        <ion-slide ng-repeat="resource in resources">
+          <img src="{{$root.imagesUrl}}{{resource.name}}"/>
+        </ion-slide>
+      </ion-slide-box>
+    </section>
+  </ion-content>
+</ion-view>
+

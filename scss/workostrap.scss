@@ -1,0 +1,271 @@
+/**********************************************
+************* VARIABLES GLOBALES **************
+***********************************************/
+
+$gutter: 16px;
+$gutterh: 8px;
+
+//Media queries width
+$mq-width-md : 1200px;
+$mq-width-sm : 992px;
+$mq-width-xs : 768px;
+
+
+//Browser prefixes map
+$browsers : (moz,ms,o,webkit);
+
+//Colors
+$light : #fff;
+$dark : #000;
+
+/**********************************************
+****************** MIXINS *********************
+***********************************************/
+
+/* Browser compatibility mixin */
+
+@mixin prefixer($property,$value)
+{
+	#{$property} : $value;
+	@each $browser in $browsers
+	{
+		-#{$browser}-#{$property} : $value;
+	}
+}
+
+/* -- End -- Browser compatibility mixin */
+
+/* Translation in axis Y */
+
+@mixin translateY($value)
+{
+	@include prefixer(transform,translateY( $value ));
+}
+
+/* -- End -- Translation in axis Y */
+
+/* Transition in axis X */
+
+@mixin translateX($value)
+{
+	@include prefixer(transform,translateX( $value ));
+}
+
+/* -- End -- Transition in axis X */
+
+/* Translation in axis XY */
+
+@mixin translateXY($value)
+{
+	@include prefixer(transform,translate( $value ));
+}
+
+/* -- End -- Translation in axis XY */
+
+/* Vertical align */
+
+@mixin valign()
+{
+	top: 50%;
+	@include translateY(-50%);
+}
+
+
+/* -- End -- Vertical align */
+
+/* Include placeholder styles*/
+
+@mixin placeholder()
+{
+
+  &::-webkit-input-placeholder
+  {
+    @content;
+  }
+  &::-moz-placeholder
+  {
+    @content;
+  }
+  &:-moz-placehoder
+  {
+    @content;
+  }
+  &:-ms-input-placeholder
+  {
+    @content;
+  }
+
+}
+
+
+/* -- end -- Include placeholder styles*/
+
+
+
+/* Media query mixin*/
+
+@mixin media_query_height($max-height)
+{
+	@media screen and (max-height: $max-height){
+		@content;
+	}
+}
+
+@mixin media_query_min_width($min-width)
+{
+	@media screen and (min-width: $min-width){
+		@content;
+	}
+}
+
+/* -- end -- Media query mixin*/
+
+/*MIXINS*/
+@mixin materialShadow($level){
+  @if ($level == 1){
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  @else{
+    @if($level == 2){
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    @else{
+      @if($level == 3){
+        box-shadow:  0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+      @else{
+        @if($level == 4){
+          box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        @else{
+          @if($level == 5){
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**********************************************
+****************** STYLES *********************
+***********************************************/
+
+/* Margin and padding Helper Classes */
+
+
+	$i : 9; //Quantity of values you need
+	@while $i >= 0 
+	{
+	  @each $side in top, bottom 
+	  {
+	    @each $property in padding, margin
+	    {
+	      @if($property == padding)
+	      {
+	        .p-#{$side}-#{$i}
+	        {
+	        	#{$property}-#{$side} : $gutter * $i;
+	        }
+	      }
+	      @if($property == margin)
+	      {
+	        .m-#{$side}-#{$i}
+	        {
+	          #{$property}-#{$side} : $gutter * $i;
+	        }
+	      }
+	    } 
+	  }
+	  $i : $i - 1;
+	}
+
+/* Padding of $gutter in both sides */
+	.h-space
+	{
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+/* -- End -- Padding of $gutter in both sides */
+
+
+/* -- End -- Margin and padding Helper Classes*/
+
+/* Appearance Helpers*/
+
+.noborder
+{
+	border:none !important;
+}
+
+.fleft
+{
+	float: left;
+}
+
+.fright
+{
+	float: right;
+}
+
+.light-grey
+{
+	color: darken(#fff,25%);
+}
+
+.grey
+{
+	color: darken(#fff,50%);
+}
+
+.dark-grey
+{
+	color: lighten(#000,25%);
+}
+
+.light
+{
+	color: $light;
+}
+
+.dark
+{
+	color: $dark;
+}
+
+/* -- End -- Appearance Helpers */
+
+
+
+/* Vertical alignment */
+
+	.vertical-align
+	{
+		position: relative;
+		top: 50%;
+		@include translateY(-50%);	
+	}
+
+/* -- End -- Vertical aligment*/
+
+/* Horizontal  aligment */
+
+	.horizontal-align
+	{
+		position: relative;
+		left: 50%; 
+		@include translateX(-50%);
+	}
+
+/* -- End -- Horizontal alignment*/
+
+/* Displaying inline-block */
+
+	.dis-in-block
+	{
+		display: inline-block;
+	}
+
+/* -- End -- Displaying inline-block */
+

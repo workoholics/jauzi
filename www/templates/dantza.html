@@ -1,0 +1,50 @@
+<ion-view>
+  <ion-content>
+    <iframe width="{{videoW}}" height="{{videoH}}" src="{{$root.loadedVideo}}" frameborder="0" allowfullscreen></iframe>
+    <section class="info">
+      <span ng-if="dance.level === '1'" class="dificult point-yellow">Erraza</span>
+      <span ng-if="dance.level === '2'" class="dificult point-orange">Erdi-mailakoa</span>
+      <span ng-if="dance.level === '3'" class="dificult point-red">Zaila</span>
+      <p ng-bind-html="dance.description"></p>
+    </section>
+    <section class="audio-player" ng-show="audioOn.name && audioOff.name">
+      <div class="text-center">
+        <button ng-show="!currentAudio.running" ng-click="playAudio()" class="play-button zmdi zmdi-play"></button>
+        <button ng-show="currentAudio.running" ng-click="restartAudio()" class="reload-button zmdi zmdi-skip-previous"></button>
+        <button ng-show="currentAudio.running" ng-click="pauseAudio()" class="pause-button zmdi zmdi-pause"></button>
+      </div>
+      
+      <div class="progbar">
+        <span class="time-left">{{currentAudio.currentTime}}</span>
+        <span class="time-right">{{currentAudio.duration}}</span>
+        <span class="progress"></span>
+      </div>
+      <ion-toggle ng-change="toggleAudioInst()" ng-model="currentAudio.inst"><span ng-show="currentAudio.inst">Urratsak entzunda</span><span ng-show="!currentAudio.inst">Urratsak entzun gabe</span></ion-toggle>
+      <audio>
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+    <section ng-show="resources.length > 0"  class="dance-images">
+      <ion-slide-box on-slide-changed="changeActive($index)">
+        <ion-slide ng-repeat="resource in resources">
+          <img src="{{$root.imagesUrl}}{{resource.name}}"/>
+        </ion-slide>
+      </ion-slide-box>
+    </section>
+    <section ng-show="danceSteps.length > 0" class="dance-steps">
+      <h4>Dantzaren urratsak</h4>
+      <div class="list">
+        <a ng-href="#/urratsa/{{danceStep.step_id}}" class="item" ng-repeat="danceStep in danceSteps | orderBy : 'name'">
+          {{danceStep.name}}
+          <span ng-if="danceStep.level === '1'" class="dificult point-yellow">Erraza</span>
+          <span ng-if="danceStep.level === '2'" class="dificult point-orange">Erdi-mailakoa</span>
+          <span ng-if="danceStep.level === '3'" class="dificult point-red">Zaila</span>
+        </a>
+      </div>
+    </section>
+
+    <div id="player"></div>
+  </ion-content>
+</ion-view>
+

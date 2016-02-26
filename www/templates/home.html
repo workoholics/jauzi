@@ -1,0 +1,53 @@
+        
+<ion-view>
+  <ion-content class="bg-grey home">
+    <section class="bg-grey">
+      <!-- Nav tabs -->
+      <ul class="jtabs-header" ng-class="{dances:'bg-blue', steps:'bg-green'}[$root.danceOrStep]">
+        <li ng-class="$root.danceOrStep === 'dances' ? 'active' : ''" ng-click="changeDances()"><a>DANTZAK</a></li>
+        <li ng-class="$root.danceOrStep === 'steps' ? 'active' : ''" ng-click="changeSteps()"><a>URRATSAK</a></li>
+      </ul>
+
+      <ion-slide-box on-slide-changed="changeActive($index)">
+        <ion-slide>
+          <ul class="list dantzak-list list-inset">
+            <li ng-repeat="dance in dances | orderBy : 'level'">
+              <a class="item item-thumbnail-left z-depth-1" href="#/dantza/{{dance._id}}">
+                <img ng-if="dance.featured_img" src="{{imagesUrl}}{{dance.featured_img}}">
+                <img ng-if="!dance.featured_img" src="img/no-dance-img.png">
+                <div class="valign">
+                  <h2>{{dance.name}}</h2>
+                  <span ng-if="dance.level === '1'" class="dificult point-yellow">Erraza</span>
+                  <span ng-if="dance.level === '2'" class="dificult point-orange">Erdi-mailakoa</span>
+                  <span ng-if="dance.level === '3'" class="dificult point-red">Zaila</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </ion-slide>
+        <ion-slide>
+          <button ng-click="toggleStepSortOrder()" class="button button-block sort">Zailtasuna <span><i class="zmdi zmdi-sort-amount-desc"></i></span></button>
+          <ul class="list urratsak-list">
+            <a ng-href="#/urratsa/{{step._id}}" class="item" ng-repeat="step in steps | orderBy : stepsSortOrder">
+              {{step.name}}
+              <span ng-if="step.level === '1'" class="dificult point-yellow">Erraza</span>
+              <span ng-if="step.level === '2'" class="dificult point-orange">Erdi-mailakoa</span>
+              <span ng-if="step.level === '3'" class="dificult point-red">Zaila</span>
+            </a>
+          </ul>
+        </ion-slide>
+      </ion-slide-box>
+
+      <div class="jtabs-body">
+        <div class="jtabs-content active">
+          
+        </div>
+        
+        <div class="jtabs-content">
+          
+        </div>
+      </div>
+    </section>
+  </ion-content>
+</ion-view>
+

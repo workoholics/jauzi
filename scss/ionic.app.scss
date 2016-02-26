@@ -1,0 +1,1331 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+@import "workostrap";
+
+/* Variables*/
+
+$f-primary: rgba(0,0,0,0.87);
+$f-primary-light: #838383;
+$f-primary-lighter: #c6c6c6;
+
+$brown: #a57073;
+$blue: #739bb1;
+$green: #6ab2ab;
+$beige: #f1debd;
+$yellow: #f9b271;
+$orange: #f07f66;
+$red: #df5c66;
+
+$light-blue: #dcf6ff;
+$light-green: #b5f4ec;
+$light-grey: #eeeeee;
+
+$dark-blue: #5e7e8f;
+$dark-green: #56908b;
+$dark-grey: #dddddd;
+
+$off-blue: #9eb6c1;
+$off-green: #95c9c4;
+
+$mq-mobile-landscape: 400px;
+
+$gutter: 10px;
+
+/* ===================== FONT ROBOTO ===================== */
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Black.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-BlackItalic.ttf);
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Bold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-BoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-LightItalic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-Thin.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../lib/roboto-font/Roboto-ThinItalic.ttf);
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+
+/* ===================== FONT DROID ===================== */
+@font-face {
+    font-family: droid;
+    src: url(../lib/droid-font/DroidSerif.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: droid;
+    src: url(../lib/droid-font/DroidSerif-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: droid;
+    src: url(../lib/droid-font/DroidSerif-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: droid;
+    src: url(../lib/droid-font/DroidSerif-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/* ====================== Generales ====================== */
+body
+{
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 400;
+	background-color: $light-grey;
+	color: $f-primary;
+}
+
+p,a{
+	font-size: 16px;
+	line-height: 23px;
+}
+
+p{
+	b,strong{
+		font-weight: 600;
+	}
+}
+
+
+
+
+button 
+{
+	border: 0px !important;
+}
+li 
+{
+	font-size: 14px;
+	color: #666;
+}
+em 
+{
+	font-style: italic;
+}
+.item-divider
+{
+	font-weight: normal;
+}
+.scroll 
+{
+	background-color: transparent;
+	//padding-bottom: $gutter * 6;
+	&:after{
+		content: "";
+		display: block;
+		width: 100%;
+		height: $gutter * 6;
+	}
+	//padding-bottom: $gutter * 8; 
+}
+.pane 
+{
+	background-color: transparent;
+}
+/*Backgrounds*/
+.bg-brown
+{
+	background-color: $brown;
+	color: $light;
+}
+.bg-blue
+{
+	background-color: $blue;
+	color: $light;
+}
+.bg-green
+{
+	background-color: $green;
+	color: $light;
+}
+.bg-yellow
+{
+	background-color: $yellow;
+	color: $light;
+}
+.bg-orange
+{
+	background-color: $orange;
+	color: $light;
+}
+.bg-red
+{
+	background-color: $red;
+	color: $light;
+}
+
+.bg-grey{
+	background-color: $light-grey;
+}
+
+// light
+.light-blue
+{
+	background-color: $light-blue;
+}
+.light-green
+{
+	background-color: $light-green;
+}
+
+/*Colors*/
+.brown
+{
+	color: $brown !important;
+}
+.blue
+{
+	color: $blue !important;
+}
+.green
+{
+	color: $green !important;
+	background-color: transparent !important;
+}
+.yellow
+{
+	color: $yellow !important;
+}
+.orange
+{
+	color: $orange !important;
+}
+.red
+{
+	color: $red !important;
+}
+
+// off
+.off-blue
+{
+	color: $off-blue;
+}
+.off-green
+{
+	color: $off-green;
+}
+// Helper CSS
+.pull-right 
+{
+  float: right !important;
+}
+.pull-left 
+{
+  float: left !important;
+}
+.hide 
+{
+  display: none !important;
+}
+.show 
+{
+  display: block !important;
+}
+.hidden 
+{
+  display: none !important;
+}
+// Tipografía
+h1, h2, h3, h4, h5, h6
+{
+	color: rgba(0,0,0,0.87);
+}
+h1
+{
+	font-family: 'Roboto', sans-serif;
+}
+h2
+{
+	font-size: 24px;
+	font-family: droid;
+	font-style: italic;
+}
+
+h4{
+	font-size: 1em;
+	font-weight: 600;
+	color: $f-primary-light;
+	font-family: Roboto;
+}
+
+.list-inset{
+	background-color: transparent;
+}
+
+.valign{
+	position: relative;
+	top: 50%;
+	@include prefixer(transform,translateY(-50%));
+}
+
+.scroll-content{
+	background-color: $light;
+	&.bg-grey{
+		background-color: $light-grey;
+	}
+	
+}
+
+.list{
+	.item{
+		border-left: none;
+		border-right: none;
+	}
+}
+
+.zmdi{
+	font-size: 24px;
+}
+
+
+//Components
+
+/* No visited slider */
+.no-visited-slider{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $brown;
+    .slider-slides{
+    	.slider-slide{
+    		text-align: center;
+    		.ion-slide-content{
+				position: relative;
+				top: 50%;
+				@include prefixer(transform,translateY(-50%));
+				h2{
+					font-family: droid;
+					font-style: italic;
+	    			color: $beige;
+	    			font-size: 1.4em;
+	    			margin: $gutter * 6 0 0;
+	    			padding: 0 $gutter;
+	    		}
+    			img{
+    				
+    				height: 120px;
+    			}
+    		}
+    		
+    	}
+    }
+
+    
+}
+
+.slider-pager{
+    	bottom: 26px;
+    	.slider-pager-page{
+    		width: 10px;
+			.icon{
+	    		font-size: 10px;
+	    		color: $light;
+	    	}
+    	}
+    	
+    }
+
+.runapp{
+	position: absolute;
+	bottom:0;
+	z-index: 10;
+	height: $gutter * 6;
+	display: block;
+	width: 100%;
+	> label{
+		display: inline-block;
+		vertical-align: top;
+		margin-left: $gutter * 2;
+		font-weight: 500;
+	}
+
+	.icon{
+		float: right;
+		margin-right: $gutter * 2;
+	}
+
+	>label,
+	>.icon{
+		color: $light;
+		line-height: $gutter * 6;
+	}
+}
+
+/* AUDIO PLAYER */
+.audio-player{
+	background-color: #F7F7F9;
+	@include materialShadow(1);
+	padding: $gutter * 2 0;
+	margin-bottom: $gutter * 4;
+
+	h2{
+		font-family: droid;
+		font-style: italic;
+		color: $f-primary-light;
+		margin-bottom: $gutter * 3;
+		font-size: 1.6em;
+	}
+
+	.play-button,
+	.pause-button,
+	.reload-button{
+		display: inline-block;
+		width: $gutter * 6;
+		height: $gutter * 6;
+		background-color: $blue;
+		color: $light;
+		border-radius: $gutter * 6;
+		@include materialShadow(1);
+	}
+	
+	.reload-button{
+		background-color: transparent;
+		color: $blue;
+		box-shadow: none;
+	}
+
+	.pause-button{
+		margin-right: $gutter * 6 + 3;
+	}
+
+	// .item-toggle{
+	// 		border: none;
+	// 		padding: 0;
+	// 		background-color: transparent;
+	// 		font-size: 14px;
+	// 		padding-left: 0;
+	// 		>*{
+	// 			vertical-align: top;
+	// 		}
+	// 		>div{
+	// 			margin-top: 9px;
+	// 		}
+	// 		>div,
+	// 		.toggle{
+	// 			display: inline-block;
+	// 		}
+	// 		.toggle{
+	// 			margin: 0 0 0 $gutter * 3;
+	// 			position: relative;
+	// 			top: auto;
+	// 			left: auto;
+	// 		}
+
+	// 		+ p{
+	// 			margin: 0;
+	// 		}
+	// }
+
+	.item-toggle{
+		text-align: right;
+		background-color: transparent;
+		border:none;
+		margin-top: $gutter;
+		padding-right: 90px;
+		> div > span{
+			color: #838383;
+		}
+		
+	}
+
+	.toggle input:checked + .track{
+		border-color: $blue;
+ 	   	background-color: $blue;
+	}
+
+	.toggle input:checked + .track .handle{
+		background-color: $light;
+	}
+
+	/* PROGRESS BAR */
+	.progbar{
+		display: block;
+		height: $gutter;
+		border: none;
+		background-color: #c6c6c9;
+		margin: $gutter * 2 0 * 4 0;
+		position: relative;
+		.time-left,
+		.time-right{
+			position: absolute;
+			top: -22px;
+		}
+		.time-left{
+			left: $gutter;
+		}
+		.time-right{
+			right: $gutter;
+		}
+		.progress{
+			height: 100%;
+			background-color: $blue;
+			float: left;
+			display: inline-block;
+		}
+	}
+  
+}
+
+  
+
+/* SIDE MENU */
+.side-menu-header{
+	width: 100%;
+	height: $gutter * 14;
+	background-color: $brown;
+	text-align: center;
+	img{
+		max-height: $gutter * 8;
+		margin-top: $gutter * 3;
+	}
+}
+
+nav{
+	> ul{
+		margin-top: $gutter * 3;
+		> li{
+			position: relative;
+
+			> a{
+				font-family: droid;
+				font-style: italic;
+				position: relative;
+				height: $gutter * 5;
+				color: $f-primary;
+				display: block;
+				line-height: $gutter * 5;
+				padding: 0 $gutter 0 $gutter;
+				z-index: 10;
+				text-decoration: none;
+				text-align: center;
+				@include prefixer(transition,background-color .35s ease-in-out);
+				&.activated{
+					background-color: transparentize($brown,0.8);
+				}
+
+
+				// .icon{
+				// 	position: absolute;
+				// 	left: $gutter * 2;
+				// 	top: 0;
+				// 	line-height: $gutter * 5;
+				// 	color: #737373;
+				// 	z-index: 0;
+				// }
+
+			}
+		}
+
+	}
+	
+}
+
+.homescreen{
+	.jbar{
+		box-shadow:none;
+	}
+}
+
+/* JBAR*/
+.jbar{
+	display: block;
+	width: 100%;
+	//height: $gutter * 6; // android
+	height: 75px; //ios
+	padding-top: 15px; //ios
+	
+	background-color: $blue;
+	position: relative;
+	z-index: 99;
+	@include materialShadow(1);
+
+	@include prefixer(transition,background-color .3s ease-in-out);
+	&.bg-blue{
+		background-color: $blue;
+	}
+	&.bg-green{
+		background-color: $green;
+	}
+	&.bg-brown{
+		background-color: $brown;
+	}
+
+
+	.button{
+		margin-top: 7px; // ios
+		background-color:transparent;
+		border:none;
+		position: absolute;
+	    top: 50%;
+	    @include prefixer(transform,translateY(-50%));
+	    left: 0;
+	    width: auto;
+	    height: auto;
+	    line-height: 1;
+	    min-height: 0;
+	    min-width: 0;
+	    padding-right: $gutter * 3;
+	    &:after{
+	    	content: none;
+	    }
+		.icon{
+			color: $light;
+			line-height: 1;
+			vertical-align: top;
+			&:after,
+			&:before{
+				line-height: 1;
+			}
+		}
+	}
+
+
+	.title{
+		position: relative;
+		font-family: droid;
+		font-style: italic;
+		text-align: left;
+		display:block;
+	    margin-top: 0;
+    	margin-bottom: 0;
+    	font-size: $gutter * 2;
+    	line-height: 1;
+    	color: $light;
+    	margin-left: $gutter * 7;
+    	vertical-align: middle;
+    	top: 50%;
+    	@include prefixer(transform,translateY(-50%));
+	}
+}
+
+/* === Inner content ===*/
+.info{
+	background-color: $light;
+	padding: $gutter* 2 $gutter;
+
+	p{
+		margin-top: $gutter;
+		margin-bottom: $gutter;
+		color: $f-primary-light;
+	}
+	.dificult{
+		&:after{
+			content: none !important;
+		}
+	}
+}
+
+.dance-steps{
+	 margin-top: $gutter * 2;
+}
+
+.dance-steps .list,
+.urratsak-list{
+	.item{
+		font-family: droid;
+		font-style: italic;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		@include prefixer(transition,background-color .35s ease-in-out);
+		&.activated{
+			background-color:rgba(0,0,0,0.02);
+		}
+		.dificult{
+			float: right;
+			font-family: Roboto;
+			font-style: normal;
+			&:before{
+				display:none !important;
+			}
+
+			&:after{
+				margin-left: $gutter / 2;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.dance-steps{
+	h4{
+		padding: 0 $gutter;	
+	    color: #838383;
+	    font-size: 16px;
+	}
+	> p{
+		padding: 0 $gutter;
+		color: $f-primary-light;
+	}
+}
+
+.dance-images,
+.step-images{
+	width: 100%;
+
+	margin-top: 0;
+	margin-bottom: $gutter * 2;
+
+	h4{
+		padding: 0 $gutter;
+	}
+
+	>p{
+		padding: 0 $gutter;
+		color: $f-primary-light;
+	}
+	
+	// .slider{
+	// 	max-width: 500px;
+	// }
+
+	.slider-slide{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+
+
+/* ==== JTABS ==== */
+
+.jtabs-header{
+	display: block;
+	width: 100%;
+	height: 43px; // android
+	background-color: $blue;
+	@include prefixer(transition,background-color .3s ease-in-out);
+	&.bg-blue{
+		background-color: $blue;
+	}
+	&.bg-green{
+		background-color: $green;
+	}
+	li{
+		float: left;
+		width: 50%;
+		text-align: center;
+		height: $gutter * 4 + 3;
+		position: relative;
+		&:after{
+			content: '';
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			height: 3px;
+			background-color: $yellow;
+			left: 0;
+
+			@include prefixer(transform,scale(0,1));
+			@include prefixer(transition,.35s all);
+		}
+
+		&.active{
+			&:after{
+				@include prefixer(transform,scale(1,1));
+			}
+		}
+		a{
+			line-height: $gutter* 4;
+			color: $light;
+			text-decoration: none;
+			font-weight:500;
+		}
+	}
+}
+
+
+
+
+
+
+
+// Estructurales
+section.content
+{
+	margin-top: 0;	
+}
+
+.jauzi
+{
+	/* ===== HOME ===== */
+
+	.home{
+		.slider-pager{
+			display: none;
+		}
+	}
+
+	.dantzak-list
+	{
+		margin: $gutter / 2 0;
+		border: 0px;
+		.item
+		{
+			position: relative;
+			@include materialShadow(1);
+			margin: $gutter / 2 0;
+			padding: 0;
+			min-height: 0;
+			height: $gutter * 10;
+			margin-bottom: $gutter;
+			border:
+			{
+				top: 1px;
+				right: 0px;
+				bottom: 0;
+				left: 0px;
+				radius: 0px;
+			}	
+			&:after
+			{
+				content: none;
+			}
+
+			img{
+				float:left;
+				left: 0;
+				width: $gutter * 10;
+				max-width: none;
+				max-height: none;
+				height: auto;
+				top: 50px;
+				@include prefixer(transform,translateY(-50%));
+			}
+
+			h2{
+				font-family: droid;
+				font-style: italic;
+				padding-left: $gutter * 12;
+				font-size: 24px;	
+				line-height: 32px;
+				display: block;
+			}
+			
+		}
+		.dificult 
+		{
+			padding-left: $gutter * 12; 
+			display: block;
+			&:before
+			{
+				
+			}
+			&:after
+			{
+				display: none;
+			}
+		}
+	}
+	// Paso final
+	.urratsa-card
+	{
+		.item-video
+		{
+			
+		}
+		header
+		{
+			background-color: $green;
+			
+		}
+		.dificult 
+		{
+			margin-bottom: $gutter;
+			&:before
+			{
+				display: inline-block;
+			}
+			&:after
+			{
+				display: none;
+			}
+		}
+	}
+
+	// Danza final
+	.dantza-card
+	{
+		.urratsak-list
+		{
+			header.item-divider
+			{
+				background-color: transparent;
+				border: none;
+				height: $gutter * 3;
+				h2
+				{
+					font-size: 12px;
+					color: rgba(0,0,0,0.54);
+					font-weight: 600;
+					@include translateY(-50%);
+					position: absolute;
+					top: 50%;
+				}
+			}
+			border: none;
+			.item
+			{
+				height: $gutter * 8;
+				border-top: 1px solid $light-grey;
+				border-radius: 0px;
+				padding: 0;
+				&:first-child
+				{
+					border-top: 0px;
+				}
+				&:last-child
+				{
+					border-bottom: 1px solid $light-grey;
+				}
+				.vertical-center
+				{
+					width: 100%;
+					
+					h2, h3
+					{
+						color: rgba(0,0,0,0.87);
+						margin: 0 0 0 $gutter * 4;
+						line-height: normal;
+						float: left;
+						width: auto;
+					}
+				}
+			}
+			.dificult 
+			{
+				float: right;
+				padding-right: $gutter;
+				margin-bottom: 0;
+				&:before
+				{
+					display: none;
+				}
+				&:after
+				{
+					display: inline-block;
+					margin: 0 0 0 $gutter;
+				}
+			}	
+
+		}
+		.dificult 
+		{
+			margin-bottom: $gutter;
+			&:before
+			{
+				display: inline-block;
+			}
+			&:after
+			{
+				display: none;
+			}
+		}
+	}
+	
+
+	.card
+	{
+		box-shadow: none;
+		margin: 0;
+		border: none;
+		.item-video
+		{
+			text-align: center;
+			border: 0px;
+			height: 200px;
+			i 
+			{
+				position: absolute;
+				color: #fff;
+				@include translateXY(-50%);
+				left: 50%;
+				top: 35%;
+				font-size: 65px;
+			}
+			img 
+			{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.item 
+		{
+			border-radius: 0px !important;
+			border: 0px;
+			&:last-child
+			{
+				border-bottom: 1px solid $light-grey;
+			}
+		}
+		header
+		{
+			border-top: 0px;
+			border-bottom: 0px;
+			h2
+			{
+				font-weight: normal;
+				padding: 0 $gutter;
+			}
+		}
+		.card-content
+		{
+			padding: $gutter * 2;
+			p 
+			{
+				white-space: initial;
+			}
+			ul 
+			{
+				li 
+				{
+					white-space: initial;
+					font-size: 14px;
+					color: #666;
+					list-style: initial;
+					margin-left: $gutter + 5;
+				}
+			}
+		}
+		button 
+		{
+			box-shadow: 0px 1px 2px $light-grey;
+		}
+		.card-action 
+		{
+			padding: $gutter;
+		}
+	}
+	.item 
+	{
+		p 
+		{
+			font-size: 14px;
+			color: rgba(0,0,0,0.87);
+		}
+	}
+	.dificult 
+	{
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(0,0,0,0.26);
+		display: inline-block;
+		&:before, &:after
+		{
+			content: " ";
+			width: 8px;
+			height: 8px;
+			background-color: $light;
+			display: inline-block;
+			border-radius: 8px;
+			margin: 0 $gutter 0 0;
+		}
+		&.point-yellow
+		{
+			&:before, &:after
+			{
+				background-color: $yellow !important;
+			}
+		}
+		&.point-orange
+		{
+			&:before, &:after
+			{
+				background-color: $orange !important;
+			}
+		}
+		&.point-red
+		{
+			&:before, &:after
+			{
+				background-color: $red !important;
+			}
+		}
+	}
+	.sort 
+	{
+		background-color: rgba(0,0,0,0.16);
+		margin: 0;
+		text-align: right;
+		color: $light;
+		font-size: 16px;
+		border-radius: 0;
+		font-weight: 500;
+		span 
+		{
+			position: relative;
+			margin: 0 0 0 32px;
+			i 
+			{
+				@include translateY(-50%);
+				position: absolute;
+				top: 50%;
+				right: 0;
+			}
+		}
+		
+	}
+}
+
+/* VIDEO CONTROL BAR */
+.video-controls{
+	.play-button{
+		width: $gutter * 6;
+		height: $gutter * 6;
+		border-radius: $gutter * 6;
+		background-color: $green;
+		color: $light;
+		@include materialShadow(1);
+	}
+}
+
+/* DEFINITION CONTENT */
+.definition-content{
+	padding: $gutter * 2 $gutter;
+	p{
+		color: $f-primary-light;
+		ul{
+			padding-left: $gutter * 2;
+			margin-top: $gutter;
+			li{
+				list-style-type: disc; 
+			}
+		}
+	}
+}
+
+/* ABOUT */
+.guri-buruz-content{
+	padding: $gutter * 2 0;
+	>p,>h1,>h2,>h3{
+		padding: 0 $gutter;
+	}
+
+	h2{
+		font-size: 1.2em;
+	}
+
+	p{
+		color: $f-primary-light;
+	}
+
+	.steps{
+		background-color: $brown;
+		padding: $gutter * 4 $gutter;
+		text-align: center;
+		margin-top: $gutter * 2;
+
+		.step{
+			margin-bottom: $gutter * 4;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		h2{
+			color: $beige;
+		}
+		h3{
+			font-size: 1.1em;
+			color: $beige;
+			font-family: droid;
+			font-style: italic;
+		}
+		p{
+			color: transparentize($beige,0.3);
+		}
+		img{
+			max-height: 80px;
+		}
+	}
+
+	.workoholics{
+		padding: $gutter * 4 $gutter $gutter * 8;
+		text-align: center;
+		a{
+			display: block;
+			color: $f-primary;
+		}
+		img{
+			max-width: 220px;
+			margin-top: $gutter * 3;
+		}
+
+		p,ul{
+			text-align: left;
+		}
+
+		ul{
+			padding-left: $gutter * 3;
+			li{
+				list-style-type: disc;
+			}
+		}
+	}
+}
+
+.step-screen{
+	.slider{
+		margin-bottom: $gutter *3;
+	}
+}
+
+.about{
+	margin-top: $gutter * 3;
+	padding: 0 $gutter;
+	text-align: center;
+
+
+	h2,p{
+		color: $f-primary-light;
+	}
+
+	h2{
+		font-size: 18px;
+		font-family: droid;
+		font-weight: 500;
+		font-style: italic;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	p{
+		font-weight: 400;
+		
+	}
+
+	hr{
+		border-top:1px solid #eee;
+		border-bottom: none;
+		border-left: none;
+		border-right: none;
+		margin: $gutter * 3 0;
+	}
+
+	a{
+		color: $brown;
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.logo{
+		margin-top: $gutter * 4;
+		img{
+			max-width: 220px;
+		}
+		a{
+			display: block;
+			color: $f-primary-light;
+			margin-bottom: $gutter * 2;
+		}
+	}
+}
+
+.glosary{
+	a{
+		font-family: droid; 
+		font-style: italic;
+	}
+}
+

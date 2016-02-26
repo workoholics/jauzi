@@ -1,5 +1,8 @@
 # Jauzi
 ## Euskal Dantzak ikasteko APP
+
+Web orrialdea <a target="_blank" href="http://www.jauzi.eus"></a>
+
 ### Ikas ezazu jauzirekin
 
 Jauziak euskal dantza tradizionalak dira, eta taldeka dantzatzen dira, biribilean. Izen propioa duten hainbat urratseko segidak osatzen dituzte Jauziak izeneko dantza ugariek, eta, gaur egun, erromerietan dantzatzen dira. Dantza errazteko, urrats bakoitza iragarri ohi da.

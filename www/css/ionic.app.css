@@ -10088,11 +10088,11 @@ em {
   color: #fff; }
 
 .bg-yellow {
-  background-color: #f9b271;
+  background-color: #ffc75b;
   color: #fff; }
 
 .bg-orange {
-  background-color: #f07f66;
+  background-color: #ffc75b;
   color: #fff; }
 
 .bg-red {
@@ -10120,10 +10120,10 @@ em {
   background-color: transparent !important; }
 
 .yellow {
-  color: #f9b271 !important; }
+  color: #ffc75b !important; }
 
 .orange {
-  color: #f07f66 !important; }
+  color: #ffc75b !important; }
 
 .red {
   color: #df5c66 !important; }
@@ -10198,9 +10198,21 @@ h4 {
   background-color: #a57073; }
   .no-visited-slider .slider-slides .slider-slide {
     text-align: center; }
+    .no-visited-slider .slider-slides .slider-slide.slide1 {
+      background-color: #a57073;
+      background-image: url(../img/bg_pasos7.png); }
+    .no-visited-slider .slider-slides .slider-slide.slide2 {
+      background-color: #739bb1;
+      background-image: url(../img/bg_pasos10.png); }
+    .no-visited-slider .slider-slides .slider-slide.slide3 {
+      background-color: #6ab2ab;
+      background-image: url(../img/bg_pasos10.png); }
     .no-visited-slider .slider-slides .slider-slide .ion-slide-content {
       position: relative;
       top: 50%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
       transform: translateY(-50%);
       -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -10209,12 +10221,19 @@ h4 {
       .no-visited-slider .slider-slides .slider-slide .ion-slide-content h2 {
         font-family: droid;
         font-style: italic;
-        color: #f1debd;
-        font-size: 1.4em;
-        margin: 60px 0 0;
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.2em;
+        margin: 10px 0 0;
         padding: 0 10px; }
-      .no-visited-slider .slider-slides .slider-slide .ion-slide-content img {
-        height: 120px; }
+        @media screen and (min-width: 768px) {
+          .no-visited-slider .slider-slides .slider-slide .ion-slide-content h2 {
+            font-size: 1.4em;
+            margin: 30px 0 0; } }
+      .no-visited-slider .slider-slides .slider-slide .ion-slide-content .number {
+        font-size: 6em;
+        font-family: droid;
+        color: #fff; }
 
 .slider-pager {
   bottom: 26px; }
@@ -10348,8 +10367,7 @@ nav > ul {
 .jbar {
   display: block;
   width: 100%;
-  height: 75px;
-  padding-top: 15px;
+  height: 60px;
   background-color: #739bb1;
   position: relative;
   z-index: 99;
@@ -10366,7 +10384,6 @@ nav > ul {
   .jbar.bg-brown {
     background-color: #a57073; }
   .jbar .button {
-    margin-top: 7px;
     background-color: transparent;
     border: none;
     position: absolute;
@@ -10393,8 +10410,6 @@ nav > ul {
         line-height: 1; }
   .jbar .title {
     position: relative;
-    font-family: droid;
-    font-style: italic;
     text-align: left;
     display: block;
     margin-top: 0;
@@ -10507,7 +10522,7 @@ nav > ul {
       position: absolute;
       bottom: 0;
       height: 3px;
-      background-color: #f9b271;
+      background-color: #ffc75b;
       left: 0;
       transform: scale(0, 1);
       -moz-transform: scale(0, 1);
@@ -10702,9 +10717,9 @@ section.content {
       border-radius: 8px;
       margin: 0 10px 0 0; }
     .jauzi .dificult.point-yellow:before, .jauzi .dificult.point-yellow:after {
-      background-color: #f9b271 !important; }
+      background-color: #b1f152 !important; }
     .jauzi .dificult.point-orange:before, .jauzi .dificult.point-orange:after {
-      background-color: #f07f66 !important; }
+      background-color: #ffc75b !important; }
     .jauzi .dificult.point-red:before, .jauzi .dificult.point-red:after {
       background-color: #df5c66 !important; }
   .jauzi .sort {
@@ -10759,24 +10774,30 @@ section.content {
     color: #838383; }
   .guri-buruz-content .steps {
     background-color: #a57073;
-    padding: 40px 10px;
+    background-image: url(../img/bg_pasos7.png);
+    padding: 80px 10px 40px;
     text-align: center;
     margin-top: 20px; }
     .guri-buruz-content .steps .step {
-      margin-bottom: 40px; }
+      margin-bottom: 60px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto; }
       .guri-buruz-content .steps .step:last-child {
         margin-bottom: 0; }
     .guri-buruz-content .steps h2 {
-      color: #f1debd; }
+      color: #fff; }
     .guri-buruz-content .steps h3 {
       font-size: 1.1em;
-      color: #f1debd;
+      color: #fff;
       font-family: droid;
       font-style: italic; }
     .guri-buruz-content .steps p {
       color: rgba(241, 222, 189, 0.7); }
-    .guri-buruz-content .steps img {
-      max-height: 80px; }
+    .guri-buruz-content .steps .number {
+      font-size: 5em;
+      font-family: droid;
+      color: #fff; }
   .guri-buruz-content .workoholics {
     padding: 40px 10px 80px;
     text-align: center; }

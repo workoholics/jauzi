@@ -34,8 +34,9 @@ $brown: #a57073;
 $blue: #739bb1;
 $green: #6ab2ab;
 $beige: #f1debd;
-$yellow: #f9b271;
-$orange: #f07f66;
+$easy: #b1f152;
+$yellow: #ffc75b;
+$orange: #ffc75b;
 $red: #df5c66;
 
 $light-blue: #dcf6ff;
@@ -391,21 +392,42 @@ h4{
     .slider-slides{
     	.slider-slide{
     		text-align: center;
+    		&.slide1{
+    			background-color: $brown;
+    			background-image: url(../img/bg_pasos7.png);
+    		}
+    		&.slide2{
+    			background-color: $blue;
+    			background-image: url(../img/bg_pasos10.png);
+    		}
+    		&.slide3{
+    			background-color: $green;
+    			background-image: url(../img/bg_pasos10.png);
+    		}
     		.ion-slide-content{
 				position: relative;
 				top: 50%;
+				max-width: 400px;
+				margin-left: auto;
+				margin-right: auto;
 				@include prefixer(transform,translateY(-50%));
 				h2{
 					font-family: droid;
 					font-style: italic;
-	    			color: $beige;
-	    			font-size: 1.4em;
-	    			margin: $gutter * 6 0 0;
+					font-weight: bold;
+	    			color: $light;
+	    			font-size: 1.2em;
+	    			margin: $gutter 0 0;
 	    			padding: 0 $gutter;
+	    			@media screen and (min-width:768px){
+	    				font-size: 1.4em;
+	    				margin: $gutter * 3 0 0;
+	    			}
 	    		}
-    			img{
-    				
-    				height: 120px;
+    			.number{
+    				font-size: 6em;
+    				font-family: droid;
+    				color: $light;
     			}
     		}
     		
@@ -632,9 +654,9 @@ nav{
 .jbar{
 	display: block;
 	width: 100%;
-	//height: $gutter * 6; // android
-	height: 75px; //ios
-	padding-top: 15px; //ios
+	height: $gutter * 6; // android
+	// height: 75px; //ios
+	// padding-top: 15px; //ios
 	
 	background-color: $blue;
 	position: relative;
@@ -654,7 +676,7 @@ nav{
 
 
 	.button{
-		margin-top: 7px; // ios
+		//margin-top: 7px; // ios
 		background-color:transparent;
 		border:none;
 		position: absolute;
@@ -684,8 +706,6 @@ nav{
 
 	.title{
 		position: relative;
-		font-family: droid;
-		font-style: italic;
 		text-align: left;
 		display:block;
 	    margin-top: 0;
@@ -1127,7 +1147,7 @@ section.content
 		{
 			&:before, &:after
 			{
-				background-color: $yellow !important;
+				background-color: $easy !important;
 			}
 		}
 		&.point-orange
@@ -1214,31 +1234,37 @@ section.content
 
 	.steps{
 		background-color: $brown;
-		padding: $gutter * 4 $gutter;
+		background-image: url(../img/bg_pasos7.png);
+		padding: $gutter * 8 $gutter $gutter * 4;
 		text-align: center;
 		margin-top: $gutter * 2;
 
 		.step{
-			margin-bottom: $gutter * 4;
+			margin-bottom: $gutter * 6;
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
 			&:last-child{
 				margin-bottom: 0;
 			}
 		}
 
 		h2{
-			color: $beige;
+			color: $light;
 		}
 		h3{
 			font-size: 1.1em;
-			color: $beige;
+			color: $light;
 			font-family: droid;
 			font-style: italic;
 		}
 		p{
 			color: transparentize($beige,0.3);
 		}
-		img{
-			max-height: 80px;
+		.number{
+			font-size: 5em;
+			font-family: droid;
+			color: $light;
 		}
 	}
 

@@ -20,6 +20,7 @@ app.run(function($ionicPlatform,$rootScope) {
   $rootScope.imagesUrl = 'http://backend.jauzi.eus/upload/';
   $rootScope.audiosUrl = 'http://backend.jauzi.eus/upload/audio/';
   $rootScope.videosUrl = 'http://backend.jauzi.eus/upload/video/';
+  
   $rootScope.getHttpRequestConfig = function(){
     var headers = {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'};
     return {

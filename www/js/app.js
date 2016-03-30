@@ -15,6 +15,9 @@ app.run(function($ionicPlatform,$rootScope) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    console.log(window.cordova);
+
   });
   $rootScope.publicapiUrl = 'http://51.255.43.236:8080/publicapi/';
   $rootScope.imagesUrl = 'http://backend.jauzi.eus/upload/';

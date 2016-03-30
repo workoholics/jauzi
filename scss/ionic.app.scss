@@ -654,9 +654,9 @@ nav{
 .jbar{
 	display: block;
 	width: 100%;
-	height: $gutter * 6; // android
-	// height: 75px; //ios
-	// padding-top: 15px; //ios
+	// height: $gutter * 6; // android
+	height: 75px; //ios
+	padding-top: 15px; //ios
 	
 	background-color: $blue;
 	position: relative;
@@ -676,7 +676,7 @@ nav{
 
 
 	.button{
-		//margin-top: 7px; // ios
+		margin-top: 7px; // ios
 		background-color:transparent;
 		border:none;
 		position: absolute;
@@ -1344,6 +1344,11 @@ section.content
 			display: block;
 			color: $f-primary-light;
 			margin-bottom: $gutter * 2;
+		}
+	}
+	.logogv{
+		img{
+			max-width: 300px;
 		}
 	}
 }

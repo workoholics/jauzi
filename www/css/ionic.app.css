@@ -10367,7 +10367,8 @@ nav > ul {
 .jbar {
   display: block;
   width: 100%;
-  height: 60px;
+  height: 75px;
+  padding-top: 15px;
   background-color: #739bb1;
   position: relative;
   z-index: 99;
@@ -10384,6 +10385,7 @@ nav > ul {
   .jbar.bg-brown {
     background-color: #a57073; }
   .jbar .button {
+    margin-top: 7px;
     background-color: transparent;
     border: none;
     position: absolute;
@@ -10849,6 +10851,8 @@ section.content {
       display: block;
       color: #838383;
       margin-bottom: 20px; }
+  .about .logogv img {
+    max-width: 300px; }
 
 .glosary a {
   font-family: droid;
